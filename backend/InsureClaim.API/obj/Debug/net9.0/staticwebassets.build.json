@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "KOxTKL7fFJz5qxq+ZaJTArfkAQ2+2ZeDoLvSak3bNRg=",
+  "Source": "InsureClaim.API",
+  "BasePath": "_content/InsureClaim.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

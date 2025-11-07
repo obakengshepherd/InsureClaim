@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\InsureClaim.API.props" />
+</Project>

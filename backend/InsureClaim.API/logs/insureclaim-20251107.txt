@@ -1,0 +1,139 @@
+2025-11-07 11:44:35.441 +02:00 [INF] Executed DbCommand (963ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [InsureClaimDB];
+2025-11-07 11:44:36.009 +02:00 [INF] Executed DbCommand (490ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [InsureClaimDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-11-07 11:44:36.091 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-07 11:44:36.218 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-11-07 11:44:36.223 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-07 11:44:36.255 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-07 11:44:36.327 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-07 11:44:36.351 +02:00 [INF] Applying migration '20251107085239_InitialCreate'.
+2025-11-07 11:44:36.440 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [FullName] nvarchar(100) NOT NULL,
+    [Email] nvarchar(100) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NOT NULL,
+    [Role] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [IsActive] bit NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-11-07 11:44:36.483 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Policies] (
+    [Id] int NOT NULL IDENTITY,
+    [PolicyNumber] nvarchar(50) NOT NULL,
+    [UserId] int NOT NULL,
+    [Type] int NOT NULL,
+    [CoverageAmount] decimal(18,2) NOT NULL,
+    [PremiumAmount] decimal(18,2) NOT NULL,
+    [StartDate] datetime2 NOT NULL,
+    [EndDate] datetime2 NOT NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    CONSTRAINT [PK_Policies] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Policies_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2025-11-07 11:44:36.513 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Claims] (
+    [Id] int NOT NULL IDENTITY,
+    [ClaimNumber] nvarchar(50) NOT NULL,
+    [PolicyId] int NOT NULL,
+    [UserId] int NOT NULL,
+    [Description] nvarchar(1000) NOT NULL,
+    [ClaimAmount] decimal(18,2) NOT NULL,
+    [ApprovedAmount] decimal(18,2) NULL,
+    [Status] int NOT NULL,
+    [IncidentDate] datetime2 NOT NULL,
+    [SubmittedDate] datetime2 NOT NULL,
+    [ReviewedDate] datetime2 NULL,
+    [DocumentPath] nvarchar(max) NULL,
+    [ReviewNotes] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    CONSTRAINT [PK_Claims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Claims_Policies_PolicyId] FOREIGN KEY ([PolicyId]) REFERENCES [Policies] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Claims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2025-11-07 11:44:36.528 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Payments] (
+    [Id] int NOT NULL IDENTITY,
+    [TransactionId] nvarchar(50) NOT NULL,
+    [PolicyId] int NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Method] int NOT NULL,
+    [Status] int NOT NULL,
+    [PaymentDate] datetime2 NOT NULL,
+    [ProcessedDate] datetime2 NULL,
+    [Reference] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Payments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Payments_Policies_PolicyId] FOREIGN KEY ([PolicyId]) REFERENCES [Policies] ([Id]) ON DELETE NO ACTION
+);
+2025-11-07 11:44:36.581 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Claims_ClaimNumber] ON [Claims] ([ClaimNumber]);
+2025-11-07 11:44:36.601 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Claims_PolicyId] ON [Claims] ([PolicyId]);
+2025-11-07 11:44:36.622 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Claims_UserId] ON [Claims] ([UserId]);
+2025-11-07 11:44:36.655 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Payments_PolicyId] ON [Payments] ([PolicyId]);
+2025-11-07 11:44:36.671 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Payments_TransactionId] ON [Payments] ([TransactionId]);
+2025-11-07 11:44:36.678 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Policies_PolicyNumber] ON [Policies] ([PolicyNumber]);
+2025-11-07 11:44:36.684 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Policies_UserId] ON [Policies] ([UserId]);
+2025-11-07 11:44:36.692 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]);
+2025-11-07 11:44:36.764 +02:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251107085239_InitialCreate', N'8.0.0');
+2025-11-07 11:49:27.198 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-11-07 11:49:27.347 +02:00 [INF] InsureClaim API started successfully
+2025-11-07 11:49:27.401 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-07 11:49:27.888 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-07 11:49:27.892 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-07 11:49:27.894 +02:00 [INF] Hosting environment: Development
+2025-11-07 11:49:27.898 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-07 11:49:35.211 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-07 11:49:35.338 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 11:49:35.416 +02:00 [INF] HTTP GET / responded 404 in 77.2268 ms
+2025-11-07 11:49:35.453 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 244.8632ms
+2025-11-07 11:49:35.476 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-07 11:49:59.088 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger - null null
+2025-11-07 11:49:59.146 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger - 301 0 null 58.1604ms
+2025-11-07 11:49:59.244 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-07 11:49:59.473 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 229.9286ms
+2025-11-07 11:49:59.894 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui.css - null null
+2025-11-07 11:49:59.939 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui-bundle.js - null null
+2025-11-07 11:49:59.939 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-07 11:50:00.056 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-07 11:50:00.065 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui.css - 200 144929 text/css 171.5246ms
+2025-11-07 11:50:00.068 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-07 11:50:00.081 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 141.2062ms
+2025-11-07 11:50:00.290 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-07 11:50:00.295 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 356.1659ms
+2025-11-07 11:50:01.672 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-07 11:50:01.921 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 248.6344ms
+2025-11-07 11:50:02.312 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/favicon-32x32.png - null null
+2025-11-07 11:50:02.337 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-11-07 11:50:02.354 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/favicon-32x32.png - 200 628 image/png 42.2811ms
+2025-11-07 11:50:24.661 +02:00 [INF] Application is shutting down...

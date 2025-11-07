@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "InsureClaim.Core/1.0.0": {
+        "runtime": {
+          "InsureClaim.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InsureClaim.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

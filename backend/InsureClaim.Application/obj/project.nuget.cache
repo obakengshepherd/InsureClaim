@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JWL7A7AmYUc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Application\\InsureClaim.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\obake\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
