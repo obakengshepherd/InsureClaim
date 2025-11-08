@@ -52,7 +52,7 @@ Traditional insurance systems suffer from:
 
 ---
 
-## 📊 Current Progress: **15% Complete**
+## 📊 Current Progress: **25% Complete**
 
 ### ✅ **Phase 1: Foundation (IN PROGRESS - Day 1 Complete)**
 
@@ -119,10 +119,11 @@ dotnet ef database update
 dotnet run
 ```
 
-5. **Access Swagger**
+5. **Access Swagger & Test APIs**
 
-- Open: `https://localhost:7XXX/swagger`
-- Test APIs directly in browser
+- Open: https://localhost:7XXX/swagger
+- Test the authentication endpoints
+- For protected routes (like /me), click "Authorize" and enter: Bearer YOUR_TOKEN
 
 ---
 
@@ -131,14 +132,39 @@ dotnet run
 ```
 InsureClaim/
 ├── backend/
-│   ├── InsureClaim.API/          # Web API controllers & startup
-│   ├── InsureClaim.Core/          # Domain entities & interfaces
-│   ├── InsureClaim.Application/   # Business logic & services
-│   └── InsureClaim.Infrastructure/# Data access & external services
-├── frontend/                      # React application (coming soon)
-├── docs/                          # Architecture diagrams & ERD
+│   ├── InsureClaim.API/                # Web API controllers, Program.cs, Swagger
+│   │   ├── Controllers/
+│   │   │   └── AuthController.cs       # Authentication endpoints
+│   │   ├── Program.cs                  # App configuration & DI
+│   │   └── appsettings.json           # Configuration & secrets
+│   │
+│   ├── InsureClaim.Core/               # Domain entities & enums
+│   │   └── Entities/
+│   │       ├── User.cs                 # User entity with roles
+│   │       ├── Policy.cs               # Insurance policy
+│   │       ├── InsuranceClaim.cs       # Claim entity (renamed to avoid conflicts)
+│   │       └── Payment.cs              # Payment transactions
+│   │
+│   ├── InsureClaim.Application/        # Business logic & services
+│   │   ├── DTOs/                       # Data Transfer Objects
+│   │   │   ├── RegisterDto.cs
+│   │   │   ├── LoginDto.cs
+│   │   │   ├── AuthResponseDto.cs
+│   │   │   └── UserDto.cs
+│   │   ├── Interfaces/
+│   │   │   ├── IAuthService.cs
+│   │   │   └── IJwtService.cs
+│   │   └── Services/
+│   │       ├── AuthService.cs          # Authentication logic
+│   │       └── JwtService.cs           # JWT token management
+│   │
+│   └── InsureClaim.Infrastructure/     # Data access & external services
+│       ├── Data/
+│       │   └── ApplicationDbContext.cs # EF Core DbContext
+│       └── Migrations/                 # Database migrations
+│
+├── frontend/                            # React application (Phase 1.2)
 └── README.md
-```
 
 **Why Clean Architecture?**
 
@@ -201,7 +227,7 @@ InsureClaim/
 
 ## 👨‍💻 Author
 
-**Tsaagane Obakeng Shepherd**  
+**Tsaagane Obakeng Shepherd**
 Final-Year Software Engineering Student | .NET Backend Developer
 
 - 📧 Email: obakengtsaagane@gmail.com.com
@@ -217,3 +243,4 @@ Built as a portfolio showcase project
 ---
 
 **💡 Built with passion to demonstrate production-ready software engineering practices**
+```
