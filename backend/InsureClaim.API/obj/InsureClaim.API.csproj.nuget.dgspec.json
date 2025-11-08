@@ -35,6 +35,9 @@
               "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Application\\InsureClaim.Application.csproj": {
                 "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Application\\InsureClaim.Application.csproj"
               },
+              "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj": {
+                "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj"
+              },
               "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj"
               }
@@ -152,7 +155,14 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj": {
+                "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj"
+              },
+              "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\InsureClaim.Application\InsureClaim.Application.csproj" />
     <ProjectReference Include="..\InsureClaim.Infrastructure\InsureClaim.Infrastructure.csproj" />
+    <ProjectReference Include="..\InsureClaim.Core\InsureClaim.Core.csproj" />
   </ItemGroup>
 
 </Project>

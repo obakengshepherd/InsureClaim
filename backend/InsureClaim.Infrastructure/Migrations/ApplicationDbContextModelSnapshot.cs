@@ -22,7 +22,7 @@ namespace InsureClaim.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("InsureClaim.Core.Entities.Claim", b =>
+            modelBuilder.Entity("InsureClaim.Core.Entities.InsuranceClaim", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -52,7 +52,8 @@ namespace InsureClaim.Infrastructure.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("DocumentPath")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<DateTime>("IncidentDate")
                         .HasColumnType("datetime2");
@@ -61,7 +62,8 @@ namespace InsureClaim.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ReviewNotes")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<DateTime?>("ReviewedDate")
                         .HasColumnType("datetime2");
@@ -118,7 +120,8 @@ namespace InsureClaim.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Reference")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -235,9 +238,22 @@ namespace InsureClaim.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2025, 11, 8, 6, 6, 39, 641, DateTimeKind.Utc).AddTicks(8008),
+                            Email = "admin@insureclaim.com",
+                            FullName = "System Admin",
+                            IsActive = true,
+                            PasswordHash = "$2a$11$xQPvZ7wXxmPPfWlG8EwuUeFxkCfYMKWQQQvZ7wXxmPPfWlG8EwuUe",
+                            PhoneNumber = "+27123456789",
+                            Role = 3
+                        });
                 });
 
-            modelBuilder.Entity("InsureClaim.Core.Entities.Claim", b =>
+            modelBuilder.Entity("InsureClaim.Core.Entities.InsuranceClaim", b =>
                 {
                     b.HasOne("InsureClaim.Core.Entities.Policy", "Policy")
                         .WithMany("Claims")

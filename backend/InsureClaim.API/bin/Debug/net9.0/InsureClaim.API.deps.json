@@ -9,6 +9,7 @@
       "InsureClaim.API/1.0.0": {
         "dependencies": {
           "InsureClaim.Application": "1.0.0",
+          "InsureClaim.Core": "1.0.0",
           "InsureClaim.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.4",
@@ -1051,7 +1052,9 @@
       },
       "InsureClaim.Application/1.0.0": {
         "dependencies": {
-          "BCrypt.Net-Next": "4.0.3"
+          "BCrypt.Net-Next": "4.0.3",
+          "InsureClaim.Core": "1.0.0",
+          "InsureClaim.Infrastructure": "1.0.0"
         },
         "runtime": {
           "InsureClaim.Application.dll": {

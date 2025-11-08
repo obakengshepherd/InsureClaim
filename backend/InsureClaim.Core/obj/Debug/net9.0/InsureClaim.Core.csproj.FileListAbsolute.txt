@@ -5,6 +5,7 @@ C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\I
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.AssemblyInfoInputs.cache
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.AssemblyInfo.cs
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.csproj.CoreCompileInputs.cache
+C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.sourcelink.json
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.dll
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\refint\InsureClaim.Core.dll
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Core\obj\Debug\net9.0\InsureClaim.Core.pdb

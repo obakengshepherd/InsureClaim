@@ -139,6 +139,7 @@ C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\In
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\InsureClaim.API.csproj.CoreCompileInputs.cache
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\InsureClaim.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\InsureClaim.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\InsureClaim.API.sourcelink.json
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\scopedcss\bundle\InsureClaim.API.styles.css
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API\obj\Debug\net9.0\staticwebassets.development.json

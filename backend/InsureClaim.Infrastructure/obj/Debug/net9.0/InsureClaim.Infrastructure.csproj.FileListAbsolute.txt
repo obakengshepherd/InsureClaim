@@ -9,6 +9,7 @@ C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debu
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureClaim.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureClaim.Infrastructure.AssemblyInfo.cs
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureClaim.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureClaim.Infrastructure.sourcelink.json
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureCl.2F7BA376.Up2Date
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\InsureClaim.Infrastructure.dll
 C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Infrastructure\obj\Debug\net9.0\refint\InsureClaim.Infrastructure.dll

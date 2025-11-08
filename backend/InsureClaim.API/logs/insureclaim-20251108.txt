@@ -1,0 +1,80 @@
+2025-11-08 07:23:37.166 +02:00 [INF] Application is shutting down...
+2025-11-08 08:05:06.930 +02:00 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-08 08:05:07.252 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-08 08:05:07.469 +02:00 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-08 08:05:39.948 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-08 08:05:40.063 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-08 08:05:40.105 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-08 08:07:38.704 +02:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-08 08:07:38.925 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-08 08:07:38.939 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-08 08:07:38.951 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-08 08:07:39.134 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-08 08:07:39.181 +02:00 [INF] Applying migration '20251108060640_RenameClaimToInsuranceClaim'.
+2025-11-08 08:07:39.912 +02:00 [INF] Executed DbCommand (511ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Payments]') AND [c].[name] = N'Reference');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Payments] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Payments] ALTER COLUMN [Reference] nvarchar(200) NULL;
+2025-11-08 08:07:40.018 +02:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Claims]') AND [c].[name] = N'ReviewNotes');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [Claims] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [Claims] ALTER COLUMN [ReviewNotes] nvarchar(1000) NULL;
+2025-11-08 08:07:40.123 +02:00 [INF] Executed DbCommand (95ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var2 sysname;
+SELECT @var2 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Claims]') AND [c].[name] = N'DocumentPath');
+IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [Claims] DROP CONSTRAINT [' + @var2 + '];');
+ALTER TABLE [Claims] ALTER COLUMN [DocumentPath] nvarchar(500) NULL;
+2025-11-08 08:07:40.257 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedAt', N'Email', N'FullName', N'IsActive', N'PasswordHash', N'PhoneNumber', N'Role', N'UpdatedAt') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [IsActive], [PasswordHash], [PhoneNumber], [Role], [UpdatedAt])
+VALUES (1, '2025-11-08T06:06:39.6418008Z', N'admin@insureclaim.com', N'System Admin', CAST(1 AS bit), N'$2a$11$xQPvZ7wXxmPPfWlG8EwuUeFxkCfYMKWQQQvZ7wXxmPPfWlG8EwuUe', N'+27123456789', 3, NULL);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedAt', N'Email', N'FullName', N'IsActive', N'PasswordHash', N'PhoneNumber', N'Role', N'UpdatedAt') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2025-11-08 08:07:40.271 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251108060640_RenameClaimToInsuranceClaim', N'8.0.0');
+2025-11-08 08:09:44.302 +02:00 [INF] InsureClaim API started successfully
+2025-11-08 08:09:44.500 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 08:09:44.976 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-08 08:09:44.983 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 08:09:44.986 +02:00 [INF] Hosting environment: Development
+2025-11-08 08:09:44.991 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-08 08:10:15.987 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-08 08:10:16.100 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-08 08:10:16.202 +02:00 [INF] HTTP GET / responded 404 in 105.2737 ms
+2025-11-08 08:10:16.244 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 258.8866ms
+2025-11-08 08:10:16.267 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-08 08:10:22.049 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-08 08:10:22.385 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 335.9571ms
+2025-11-08 08:10:23.406 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-08 08:10:24.123 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 716.0785ms
+2025-11-08 08:14:55.132 +02:00 [INF] Application is shutting down...

@@ -1803,7 +1803,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "BCrypt.Net-Next": "4.0.3"
+          "BCrypt.Net-Next": "4.0.3",
+          "InsureClaim.Core": "1.0.0",
+          "InsureClaim.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/InsureClaim.Application.dll": {}
@@ -4894,6 +4896,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "InsureClaim.Application >= 1.0.0",
+      "InsureClaim.Core >= 1.0.0",
       "InsureClaim.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.4",
@@ -4941,6 +4944,9 @@
           "projectReferences": {
             "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Application\\InsureClaim.Application.csproj": {
               "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Application\\InsureClaim.Application.csproj"
+            },
+            "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj": {
+              "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Core\\InsureClaim.Core.csproj"
             },
             "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\obake\\Downloads\\InsureClaim\\backend\\InsureClaim.Infrastructure\\InsureClaim.Infrastructure.csproj"

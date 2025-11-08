@@ -137,3 +137,23 @@ VALUES (N'20251107085239_InitialCreate', N'8.0.0');
 2025-11-07 11:50:02.337 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
 2025-11-07 11:50:02.354 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/favicon-32x32.png - 200 628 image/png 42.2811ms
 2025-11-07 11:50:24.661 +02:00 [INF] Application is shutting down...
+2025-11-07 16:23:05.565 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-11-07 16:23:05.686 +02:00 [INF] InsureClaim API started successfully
+2025-11-07 16:23:05.718 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-07 16:23:06.088 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-07 16:23:06.097 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-07 16:23:06.103 +02:00 [INF] Hosting environment: Development
+2025-11-07 16:23:06.110 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-07 16:23:14.273 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-07 16:23:14.364 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 16:23:14.491 +02:00 [INF] HTTP GET / responded 404 in 130.7231 ms
+2025-11-07 16:23:14.524 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 256.3973ms
+2025-11-07 16:23:14.544 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-07 16:23:48.761 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-07 16:23:49.178 +02:00 [INF] HTTP GET / responded 404 in 106.0665 ms
+2025-11-07 16:23:49.215 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 472.968ms
+2025-11-07 16:23:49.253 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-07 16:23:56.630 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-07 16:23:57.167 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 537.0061ms
+2025-11-07 16:23:58.282 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-07 16:23:58.459 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 176.8027ms

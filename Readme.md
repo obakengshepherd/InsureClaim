@@ -52,7 +52,7 @@ Traditional insurance systems suffer from:
 
 ---
 
-## 📊 Current Progress: **8% Complete**
+## 📊 Current Progress: **15% Complete**
 
 ### ✅ **Phase 1: Foundation (IN PROGRESS - Day 1 Complete)**
 
@@ -131,11 +131,12 @@ dotnet run
 ```
 InsureClaim/
 ├── backend/
-│   ├── InsureClaim.API/           # Controllers, Program.cs, Swagger
-│   ├── InsureClaim.Core/          # Domain entities, enums
-│   ├── InsureClaim.Application/   # Business logic (coming soon)
-│   └── InsureClaim.Infrastructure/ # EF Core, DbContext, migrations
-├── frontend/                      # React app (Phase 1.2)
+│   ├── InsureClaim.API/          # Web API controllers & startup
+│   ├── InsureClaim.Core/          # Domain entities & interfaces
+│   ├── InsureClaim.Application/   # Business logic & services
+│   └── InsureClaim.Infrastructure/# Data access & external services
+├── frontend/                      # React application (coming soon)
+├── docs/                          # Architecture diagrams & ERD
 └── README.md
 ```
 
@@ -200,7 +201,7 @@ InsureClaim/
 
 ## 👨‍💻 Author
 
-**Your Name**  
+**Tsaagane Obakeng Shepherd**  
 Final-Year Software Engineering Student | .NET Backend Developer
 
 - 📧 Email: obakengtsaagane@gmail.com.com

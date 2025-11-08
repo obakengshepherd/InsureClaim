@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Serilog;
+using InsureClaim.Application.Interfaces;
+using InsureClaim.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,14 @@ builder.Host.UseSerilog();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// Register application services (Dependency Injection)
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+
+// Register application services
+builder.Services.AddScoped<InsureClaim.Application.Interfaces.IAuthService, InsureClaim.Application.Services.AuthService>();
+builder.Services.AddScoped<InsureClaim.Application.Interfaces.IJwtService, InsureClaim.Application.Services.JwtService>();
+
 
 // Database configuration
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
