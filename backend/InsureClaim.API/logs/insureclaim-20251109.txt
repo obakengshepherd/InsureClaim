@@ -1,0 +1,199 @@
+2025-11-09 07:36:31.090 +02:00 [INF] InsureClaim API started successfully
+2025-11-09 07:36:31.411 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-09 07:36:32.447 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-09 07:36:32.458 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-09 07:36:32.461 +02:00 [INF] Hosting environment: Development
+2025-11-09 07:36:32.464 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-09 07:36:39.984 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-09 07:36:40.141 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-09 07:36:40.251 +02:00 [INF] HTTP GET / responded 404 in 110.2340 ms
+2025-11-09 07:36:40.290 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 310.4476ms
+2025-11-09 07:36:40.370 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-09 07:36:45.115 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-09 07:36:45.422 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 306.9817ms
+2025-11-09 07:36:46.793 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-09 07:36:47.346 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 552.4316ms
+2025-11-09 07:41:44.778 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/login - application/json 65
+2025-11-09 07:41:44.984 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:41:44.989 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:41:45.027 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 07:41:45.302 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsureClaim.Application.DTOs.LoginDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 07:41:48.045 +02:00 [INF] Login attempt for email: admin@insureclaim.com
+2025-11-09 07:41:53.204 +02:00 [INF] Executed DbCommand (1,261ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 07:41:53.269 +02:00 [WRN] Login failed - user not found: admin@insureclaim.com
+2025-11-09 07:41:53.278 +02:00 [ERR] Error during login for email: admin@insureclaim.com
+System.UnauthorizedAccessException: Invalid email or password
+   at InsureClaim.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Application\Services\AuthService.cs:line 104
+2025-11-09 07:41:53.704 +02:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-09 07:41:53.805 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API) in 8487.7759ms
+2025-11-09 07:41:53.811 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 07:41:53.834 +02:00 [INF] HTTP POST /api/Auth/login responded 401 in 8883.7867 ms
+2025-11-09 07:41:53.873 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/login - 401 null application/json; charset=utf-8 9109.604ms
+2025-11-09 07:45:06.271 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/register - application/json 139
+2025-11-09 07:45:06.359 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:45:06.362 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:45:06.400 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API)'
+2025-11-09 07:45:06.492 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(InsureClaim.Application.DTOs.RegisterDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 07:45:06.673 +02:00 [INF] Registration attempt for email: admin@insureclaim.com
+2025-11-09 07:45:07.035 +02:00 [INF] Executed DbCommand (186ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 07:45:07.944 +02:00 [INF] Executed DbCommand (69ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 100), @p2='?' (Size = 100), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 20), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedAt], [Email], [FullName], [IsActive], [PasswordHash], [PhoneNumber], [Role], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-11-09 07:45:08.028 +02:00 [INF] User registered successfully: admin@insureclaim.com with Role: "Admin"
+2025-11-09 07:45:08.102 +02:00 [INF] User registered: admin@insureclaim.com
+2025-11-09 07:45:08.107 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-09 07:45:08.172 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API) in 1674.4034ms
+2025-11-09 07:45:08.177 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API)'
+2025-11-09 07:45:08.179 +02:00 [INF] HTTP POST /api/Auth/register responded 201 in 1844.0867 ms
+2025-11-09 07:45:08.185 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/register - 201 null application/json; charset=utf-8 1920.3024ms
+2025-11-09 07:45:40.007 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/login - application/json 65
+2025-11-09 07:45:40.018 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:45:40.033 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:45:40.419 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 07:45:40.427 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsureClaim.Application.DTOs.LoginDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 07:45:40.483 +02:00 [INF] Login attempt for email: admin@insureclaim.com
+2025-11-09 07:45:40.727 +02:00 [INF] Executed DbCommand (59ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 07:45:41.140 +02:00 [INF] User logged in successfully: admin@insureclaim.com
+2025-11-09 07:45:41.145 +02:00 [INF] User logged in: admin@insureclaim.com
+2025-11-09 07:45:41.150 +02:00 [INF] Executing OkObjectResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-09 07:45:41.154 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API) in 701.1708ms
+2025-11-09 07:45:41.158 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 07:45:41.164 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 1148.6863 ms
+2025-11-09 07:45:41.169 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/login - 200 null application/json; charset=utf-8 1161.7487ms
+2025-11-09 07:46:29.047 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Policy - application/json 111
+2025-11-09 07:46:29.111 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:46:29.113 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:46:29.159 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.CreatePolicy (InsureClaim.API)'
+2025-11-09 07:46:29.201 +02:00 [INF] Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePolicy(InsureClaim.Application.DTOs.CreatePolicyDto) on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-09 07:46:29.334 +02:00 [INF] Creating policy for user 1
+2025-11-09 07:46:29.632 +02:00 [INF] Executed DbCommand (85ms) [Parameters=[@__createPolicyDto_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Id] = @__createPolicyDto_UserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-09 07:46:29.755 +02:00 [INF] Executed DbCommand (57ms) [Parameters=[@__prefix_0_rewritten='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId]
+FROM [Policies] AS [p]
+WHERE [p].[PolicyNumber] LIKE @__prefix_0_rewritten ESCAPE N'\'
+ORDER BY [p].[PolicyNumber] DESC
+2025-11-09 07:46:29.986 +02:00 [INF] Executed DbCommand (82ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 50), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Policies] ([CoverageAmount], [CreatedAt], [EndDate], [PolicyNumber], [PremiumAmount], [StartDate], [Status], [Type], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-11-09 07:46:30.011 +02:00 [INF] Policy created successfully: POL-2025-000001 for user 1
+2025-11-09 07:46:30.101 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-11-09 07:46:30.158 +02:00 [INF] Policy created: POL-2025-000001 by user 1
+2025-11-09 07:46:30.164 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'InsureClaim.Application.DTOs.PolicyDto'.
+2025-11-09 07:46:30.206 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.CreatePolicy (InsureClaim.API) in 1000.449ms
+2025-11-09 07:46:30.216 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.CreatePolicy (InsureClaim.API)'
+2025-11-09 07:46:30.219 +02:00 [INF] HTTP POST /api/Policy responded 201 in 1113.4786 ms
+2025-11-09 07:46:30.229 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Policy - 201 null application/json; charset=utf-8 1181.7994ms
+2025-11-09 07:47:37.860 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 187
+2025-11-09 07:47:37.919 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:47:37.924 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:47:38.060 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:47:38.208 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:47:38.446 +02:00 [INF] Claim submission attempt for policy 1 by user 1
+2025-11-09 07:47:39.082 +02:00 [INF] Executed DbCommand (156ms) [Parameters=[@__submitClaimDto_PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+WHERE [p].[Id] = @__submitClaimDto_PolicyId_0
+2025-11-09 07:47:39.097 +02:00 [ERR] Error submitting claim for policy 1
+System.InvalidOperationException: Policy with ID 1 not found
+   at InsureClaim.Application.Services.ClaimService.SubmitClaimAsync(Int32 userId, SubmitClaimDto submitClaimDto) in C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.Application\Services\ClaimService.cs:line 40
+2025-11-09 07:47:39.134 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-09 07:47:39.145 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 932.7043ms
+2025-11-09 07:47:39.150 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:47:39.155 +02:00 [INF] HTTP POST /api/Claim responded 400 in 1248.9877 ms
+2025-11-09 07:47:39.163 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/json; charset=utf-8 1311.5643ms
+2025-11-09 07:47:46.911 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 187
+2025-11-09 07:47:46.917 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:47:46.920 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:47:46.947 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:47:46.959 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:47:46.966 +02:00 [INF] Claim submission attempt for policy 6 by user 1
+2025-11-09 07:47:46.996 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[@__submitClaimDto_PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+WHERE [p].[Id] = @__submitClaimDto_PolicyId_0
+2025-11-09 07:47:47.112 +02:00 [INF] Executed DbCommand (59ms) [Parameters=[@__prefix_0_rewritten='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId]
+FROM [Claims] AS [c]
+WHERE [c].[ClaimNumber] LIKE @__prefix_0_rewritten ESCAPE N'\'
+ORDER BY [c].[ClaimNumber] DESC
+2025-11-09 07:47:47.461 +02:00 [INF] Executed DbCommand (81ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 50), @p3='?' (DbType = DateTime2), @p4='?' (Size = 1000), @p5='?' (Size = 500), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 1000), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (DbType = DateTime2), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Claims] ([ApprovedAmount], [ClaimAmount], [ClaimNumber], [CreatedAt], [Description], [DocumentPath], [IncidentDate], [PolicyId], [ReviewNotes], [ReviewedDate], [Status], [SubmittedDate], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-11-09 07:47:47.476 +02:00 [INF] Claim submitted successfully: CLM-2025-000001 for policy POL-2025-000001
+2025-11-09 07:47:47.485 +02:00 [INF] Claim submitted: CLM-2025-000001 by user 1
+2025-11-09 07:47:47.489 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'InsureClaim.Application.DTOs.ClaimDto'.
+2025-11-09 07:47:47.536 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 571.6684ms
+2025-11-09 07:47:47.540 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:47:47.544 +02:00 [INF] HTTP POST /api/Claim responded 201 in 626.4683 ms
+2025-11-09 07:47:47.549 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 201 null application/json; charset=utf-8 638.8433ms
+2025-11-09 07:48:29.996 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 111
+2025-11-09 07:48:30.002 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:48:30.006 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:48:30.014 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:30.028 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:48:30.090 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-09 07:48:30.145 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 114.3528ms
+2025-11-09 07:48:30.150 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:30.160 +02:00 [INF] HTTP POST /api/Claim responded 400 in 157.9188 ms
+2025-11-09 07:48:30.170 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/problem+json; charset=utf-8 173.8054ms
+2025-11-09 07:48:37.793 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 111
+2025-11-09 07:48:37.819 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:48:37.823 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:48:37.867 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:37.872 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:48:37.878 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-09 07:48:37.883 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 6.7251ms
+2025-11-09 07:48:37.887 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:37.889 +02:00 [INF] HTTP POST /api/Claim responded 400 in 70.5481 ms
+2025-11-09 07:48:37.893 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/problem+json; charset=utf-8 100.5102ms
+2025-11-09 07:48:44.245 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 111
+2025-11-09 07:48:44.278 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:48:44.280 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:48:44.293 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:44.297 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:48:44.312 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-09 07:48:44.324 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 12.6662ms
+2025-11-09 07:48:44.332 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:44.342 +02:00 [INF] HTTP POST /api/Claim responded 400 in 64.4728 ms
+2025-11-09 07:48:44.357 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/problem+json; charset=utf-8 111.9091ms
+2025-11-09 07:48:47.785 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Claim - application/json 111
+2025-11-09 07:48:47.791 +02:00 [INF] CORS policy execution failed.
+2025-11-09 07:48:47.793 +02:00 [INF] Request origin http://localhost:5278 does not have permission to access the resource.
+2025-11-09 07:48:47.798 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:47.804 +02:00 [INF] Route matched with {action = "SubmitClaim", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitClaim(InsureClaim.Application.DTOs.SubmitClaimDto) on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-09 07:48:47.813 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-09 07:48:47.820 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API) in 7.552ms
+2025-11-09 07:48:47.825 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.SubmitClaim (InsureClaim.API)'
+2025-11-09 07:48:47.829 +02:00 [INF] HTTP POST /api/Claim responded 400 in 38.3377 ms
+2025-11-09 07:48:47.834 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/problem+json; charset=utf-8 48.693ms
+2025-11-09 07:53:57.476 +02:00 [INF] Application is shutting down...

@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![.NET](https://img.shields.io/badge/.NET-8.0-purple)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-red)
-![Progress](https://img.shields.io/badge/progress-8%25-orange)
+![Progress](https://img.shields.io/badge/progress-40%25-orange)
 
 ---
 
@@ -52,7 +52,7 @@ Traditional insurance systems suffer from:
 
 ---
 
-## 📊 Current Progress: **25% Complete**
+## 📊 Current Progress: **40% Complete**
 
 ### ✅ **Phase 1: Foundation (IN PROGRESS - Day 1 Complete)**
 
@@ -107,6 +107,10 @@ cd backend/InsureClaim.API
 # Example: "Server=YOUR_MACHINE\\SQLEXPRESS;Database=InsureClaimDB;..."
 ```
 
+# Restore packages
+
+dotnet restore
+
 3. **Run Migrations**
 
 ```bash
@@ -124,6 +128,9 @@ dotnet run
 - Open: https://localhost:7XXX/swagger
 - Test the authentication endpoints
 - For protected routes (like /me), click "Authorize" and enter: Bearer YOUR_TOKEN
+- Default admin login:
+  - Email: admin@insureclaim.com
+  - Password: Admin@123
 
 ---
 
@@ -134,7 +141,9 @@ InsureClaim/
 ├── backend/
 │   ├── InsureClaim.API/                # Web API controllers, Program.cs, Swagger
 │   │   ├── Controllers/
-│   │   │   └── AuthController.cs       # Authentication endpoints
+│   │   │   ├── AuthController.cs       # Authentication endpoints
+│   │   │   ├── PolicyController.cs     # Policy management endpoints
+│   │   │   └── ClaimController.cs      # Claims management endpoints (NEW)
 │   │   ├── Program.cs                  # App configuration & DI
 │   │   └── appsettings.json           # Configuration & secrets
 │   │
@@ -150,13 +159,23 @@ InsureClaim/
 │   │   │   ├── RegisterDto.cs
 │   │   │   ├── LoginDto.cs
 │   │   │   ├── AuthResponseDto.cs
-│   │   │   └── UserDto.cs
+│   │   │   ├── UserDto.cs
+│   │   │   ├── CreatePolicyDto.cs
+│   │   │   ├── UpdatePolicyDto.cs
+│   │   │   ├── PolicyDto.cs
+│   │   │   ├── SubmitClaimDto.cs       # (NEW)
+│   │   │   ├── UpdateClaimDto.cs       # (NEW)
+│   │   │   └── ClaimDto.cs             # (NEW)
 │   │   ├── Interfaces/
 │   │   │   ├── IAuthService.cs
-│   │   │   └── IJwtService.cs
+│   │   │   ├── IJwtService.cs
+│   │   │   ├── IPolicyService.cs
+│   │   │   └── IClaimService.cs        # (NEW)
 │   │   └── Services/
 │   │       ├── AuthService.cs          # Authentication logic
-│   │       └── JwtService.cs           # JWT token management
+│   │       ├── JwtService.cs           # JWT token management
+│   │       ├── PolicyService.cs        # Policy business logic
+│   │       └── ClaimService.cs         # Claims workflow logic (NEW)
 │   │
 │   └── InsureClaim.Infrastructure/     # Data access & external services
 │       ├── Data/
@@ -166,12 +185,12 @@ InsureClaim/
 ├── frontend/                            # React application (Phase 1.2)
 └── README.md
 
-**Why Clean Architecture?**
+***Why Clean Architecture?**
 
-- ✅ Core business logic independent of frameworks
-- ✅ Easy to test and maintain
-- ✅ Scalable for enterprise growth
-- ✅ Future-proof for microservices
+- ✅ Testability: Core business logic is independent of frameworks
+- ✅ Maintainability: Clear separation of concerns, Easy to test and maintain
+- ✅ Scalability: Easy to add new features without breaking existing code which is scalable for enterprise growth
+- ✅ Future-Proof: Ready for microservices migration if needed
 
 ---
 
@@ -186,6 +205,12 @@ InsureClaim/
 | **Claims**   | Customer claims        | ClaimNumber, Status, Amount           |
 | **Payments** | Transaction history    | TransactionId, Amount, Method         |
 
+📈 Database Schema - Core Entities
+Users - Customers, Agents, Admins with role-based access
+Policies - Life, Auto, Health, Property insurance products
+Claims - Submitted → Under Review → Approved/Denied workflow
+Payments - Transaction history linked to policies
+
 **Relationships:**
 
 - 1 User → Many Policies
@@ -199,7 +224,7 @@ InsureClaim/
 ### **Skills Demonstrated**
 
 - ✅ RESTful API design with ASP.NET Core
-- ✅ Database modeling with EF Core
+- ✅ Database modeling with EF Core and ORM usage
 - ✅ Authentication with JWT tokens
 - ✅ Dependency Injection & IoC
 - ✅ Structured logging for production
@@ -207,17 +232,17 @@ InsureClaim/
 
 ### **Business Impact**
 
-- **60% faster processing** through automation
-- **Real-time visibility** into operations
-- **Secure multi-tenant** architecture
-- **Audit trail** for compliance
+- **60% faster processing** through automated workflows
+- **Real-time visibility** into policies, claims, and revenue
+- **Secure multi-tenant** architecture supporting thousands of users
+- **Audit trail** for compliance and dispute resolution
 
 ---
 
 ## 🗺️ Development Roadmap
 
 - **Week 1 (Day 1):** ✅ Database foundation (COMPLETE)
-- **Week 1 (Day 2-7):** Authentication APIs + Policy CRUD → **Target: 15%**
+- **Week 1 (Day 2-7):** ✅ Authentication APIs + Policy CRUD → (COMPLETE)
 - **Week 2-3:** Claims workflow + Payments → **Target: 40%**
 - **Week 4:** Analytics dashboards → **Target: 60%**
 - **Week 5:** Automation + Chatbot → **Target: 80%**

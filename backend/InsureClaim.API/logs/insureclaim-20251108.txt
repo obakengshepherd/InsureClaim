@@ -1372,3 +1372,27 @@ ORDER BY [p].[CreatedAt] DESC
 2025-11-08 17:33:23.194 +02:00 [INF] HTTP GET /api/Policy responded 200 in 335.4593 ms
 2025-11-08 17:33:23.199 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 358.0411ms
 2025-11-08 17:43:25.866 +02:00 [INF] Application is shutting down...
+2025-11-08 23:09:41.776 +02:00 [INF] InsureClaim API started successfully
+2025-11-08 23:09:42.066 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 23:09:42.643 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-08 23:09:42.651 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 23:09:42.654 +02:00 [INF] Hosting environment: Development
+2025-11-08 23:09:42.658 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-08 23:11:20.796 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-08 23:11:22.129 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-08 23:11:22.339 +02:00 [INF] HTTP GET / responded 404 in 238.8436 ms
+2025-11-08 23:11:22.383 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 1734.2022ms
+2025-11-08 23:11:22.400 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-08 23:11:35.922 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-08 23:11:35.999 +02:00 [INF] HTTP GET / responded 404 in 19.1258 ms
+2025-11-08 23:11:36.030 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 115.9461ms
+2025-11-08 23:11:36.182 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-08 23:11:57.930 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-08 23:11:57.997 +02:00 [INF] HTTP GET / responded 404 in 37.3485 ms
+2025-11-08 23:11:58.000 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 70.2481ms
+2025-11-08 23:11:58.010 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-08 23:13:12.837 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-08 23:13:13.277 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 452.6405ms
+2025-11-08 23:13:13.911 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-08 23:13:14.424 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 513.3745ms
+2025-11-08 23:17:13.781 +02:00 [INF] Application is shutting down...
