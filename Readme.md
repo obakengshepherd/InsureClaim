@@ -109,13 +109,14 @@ cd backend/InsureClaim.API
 
 # Restore packages
 
+````bash
 dotnet restore
 
 3. **Run Migrations**
 
 ```bash
 dotnet ef database update
-```
+````
 
 4. **Start API**
 
