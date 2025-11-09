@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![.NET](https://img.shields.io/badge/.NET-8.0-purple)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-red)
-![Progress](https://img.shields.io/badge/progress-40%25-orange)
+![Progress](https://img.shields.io/badge/progress-50%25-orange)
 
 ---
 
@@ -41,7 +41,7 @@ Traditional insurance systems suffer from:
 - **SQL Server** - Relational database
 - **JWT Authentication** - Secure token-based auth
 - **Serilog** - Structured logging
-- **Clean Architecture** - Separation of concerns
+- **Clean Architecture** - Separation of concerns with Dependency Injection
 
 ### **Frontend** (Coming in Phase 1.2)
 
@@ -50,9 +50,16 @@ Traditional insurance systems suffer from:
 - **Recharts** - Data visualization
 - **Axios** - HTTP client
 
+### **Deployment** (Phase 5)
+
+- **Backend** - Render / Railway
+- **Frontend** - Vercel / Netlify
+- **CI/CD** - GitHub Actions
+- **Future** - Azure-ready containerized services
+
 ---
 
-## 📊 Current Progress: **40% Complete**
+## 📊 Current Progress: **50% Complete**
 
 ### ✅ **Phase 1: Foundation (IN PROGRESS - Day 1 Complete)**
 
@@ -63,9 +70,9 @@ Traditional insurance systems suffer from:
 - [x] Serilog integration
 - [x] SQL Server database created
 - [x] Initial tables with relationships
-- [ ] **NEXT:** User registration & login APIs (Day 2)
-- [ ] Policy CRUD endpoints
-- [ ] React frontend setup
+- [x] User registration & login APIs (Day 2)
+- [x] Policy CRUD endpoints
+- [ ] **NEXT:** React frontend setup
 
 ### 🔜 **Phase 2: Business Operations** (Weeks 2-3)
 
@@ -145,7 +152,8 @@ InsureClaim/
 │   │   ├── Controllers/
 │   │   │   ├── AuthController.cs       # Authentication endpoints
 │   │   │   ├── PolicyController.cs     # Policy management endpoints
-│   │   │   └── ClaimController.cs      # Claims management endpoints (NEW)
+│   │   │   ├── ClaimController.cs      # Claims management endpoints
+│   │   │   └── PaymentController.cs    # Payment tracking endpoints (NEW)
 │   │   ├── Program.cs                  # App configuration & DI
 │   │   └── appsettings.json           # Configuration & secrets
 │   │
@@ -153,7 +161,7 @@ InsureClaim/
 │   │   └── Entities/
 │   │       ├── User.cs                 # User entity with roles
 │   │       ├── Policy.cs               # Insurance policy
-│   │       ├── InsuranceClaim.cs       # Claim entity (renamed to avoid conflicts)
+│   │       ├── InsuranceClaim.cs       # Claim entity
 │   │       └── Payment.cs              # Payment transactions
 │   │
 │   ├── InsureClaim.Application/        # Business logic & services
@@ -165,26 +173,31 @@ InsureClaim/
 │   │   │   ├── CreatePolicyDto.cs
 │   │   │   ├── UpdatePolicyDto.cs
 │   │   │   ├── PolicyDto.cs
-│   │   │   ├── SubmitClaimDto.cs       # (NEW)
-│   │   │   ├── UpdateClaimDto.cs       # (NEW)
-│   │   │   └── ClaimDto.cs             # (NEW)
+│   │   │   ├── SubmitClaimDto.cs
+│   │   │   ├── UpdateClaimDto.cs
+│   │   │   ├── ClaimDto.cs
+│   │   │   ├── RecordPaymentDto.cs     # (NEW)
+│   │   │   ├── UpdatePaymentDto.cs     # (NEW)
+│   │   │   └── PaymentDto.cs           # (NEW)
 │   │   ├── Interfaces/
 │   │   │   ├── IAuthService.cs
 │   │   │   ├── IJwtService.cs
 │   │   │   ├── IPolicyService.cs
-│   │   │   └── IClaimService.cs        # (NEW)
+│   │   │   ├── IClaimService.cs
+│   │   │   └── IPaymentService.cs      # (NEW)
 │   │   └── Services/
 │   │       ├── AuthService.cs          # Authentication logic
 │   │       ├── JwtService.cs           # JWT token management
 │   │       ├── PolicyService.cs        # Policy business logic
-│   │       └── ClaimService.cs         # Claims workflow logic (NEW)
+│   │       ├── ClaimService.cs         # Claims workflow logic
+│   │       └── PaymentService.cs       # Payment processing logic (NEW)
 │   │
 │   └── InsureClaim.Infrastructure/     # Data access & external services
 │       ├── Data/
 │       │   └── ApplicationDbContext.cs # EF Core DbContext
 │       └── Migrations/                 # Database migrations
 │
-├── frontend/                            # React application (Phase 1.2)
+├── frontend/                            # React application (Phase 2)
 └── README.md
 
 ***Why Clean Architecture?**
@@ -229,7 +242,7 @@ Payments - Transaction history linked to policies
 - ✅ Database modeling with EF Core and ORM usage
 - ✅ Authentication with JWT tokens
 - ✅ Dependency Injection & IoC
-- ✅ Structured logging for production
+- ✅ Structured logging for production and observability
 - ✅ Clean Architecture principles
 
 ### **Business Impact**
@@ -245,7 +258,7 @@ Payments - Transaction history linked to policies
 
 - **Week 1 (Day 1):** ✅ Database foundation (COMPLETE)
 - **Week 1 (Day 2-7):** ✅ Authentication APIs + Policy CRUD → (COMPLETE)
-- **Week 2-3:** Claims workflow + Payments → **Target: 40%**
+- **Week 2-3:** ✅ Claims workflow + Payments → **Target: 40%**
 - **Week 4:** Analytics dashboards → **Target: 60%**
 - **Week 5:** Automation + Chatbot → **Target: 80%**
 - **Week 6:** Deployment + Polish → **Target: 100%**

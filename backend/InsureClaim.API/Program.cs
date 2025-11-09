@@ -64,6 +64,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IPolicyService, PolicyService>();
 builder.Services.AddScoped<IClaimService, ClaimService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 // Register application services
 builder.Services.AddScoped<InsureClaim.Application.Interfaces.IAuthService, InsureClaim.Application.Services.AuthService>();

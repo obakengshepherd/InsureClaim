@@ -197,3 +197,19 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13
 2025-11-09 07:48:47.829 +02:00 [INF] HTTP POST /api/Claim responded 400 in 38.3377 ms
 2025-11-09 07:48:47.834 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Claim - 400 null application/problem+json; charset=utf-8 48.693ms
 2025-11-09 07:53:57.476 +02:00 [INF] Application is shutting down...
+2025-11-09 09:11:38.365 +02:00 [INF] InsureClaim API started successfully
+2025-11-09 09:11:39.209 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-09 09:11:40.496 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-09 09:11:40.522 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-09 09:11:40.533 +02:00 [INF] Hosting environment: Development
+2025-11-09 09:11:40.554 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-09 09:11:51.124 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-09 09:11:51.282 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-09 09:11:51.394 +02:00 [INF] HTTP GET / responded 404 in 116.1430 ms
+2025-11-09 09:11:51.429 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 312.0457ms
+2025-11-09 09:11:51.453 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-09 09:12:04.663 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-09 09:12:05.150 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 487.3718ms
+2025-11-09 09:12:06.784 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-09 09:12:07.340 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 555.5051ms
+2025-11-09 09:12:42.751 +02:00 [INF] Application is shutting down...
