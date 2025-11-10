@@ -6,7 +6,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![.NET](https://img.shields.io/badge/.NET-8.0-purple)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-red)
-![Progress](https://img.shields.io/badge/progress-50%25-orange)
+![Progress](https://img.shields.io/badge/progress-60%25-orange)
 
 ---
 
@@ -59,7 +59,7 @@ Traditional insurance systems suffer from:
 
 ---
 
-## 📊 Current Progress: **50% Complete**
+## 📊 Current Progress: **60% Complete**
 
 ### ✅ **Phase 1: Foundation (IN PROGRESS - Day 1 Complete)**
 
@@ -247,7 +247,7 @@ Payments - Transaction history linked to policies
 
 ### **Business Impact**
 
-- **60% faster processing** through automated workflows
+- **60% faster claim processing** through automated workflows
 - **Real-time visibility** into policies, claims, and revenue
 - **Secure multi-tenant** architecture supporting thousands of users
 - **Audit trail** for compliance and dispute resolution
@@ -259,7 +259,7 @@ Payments - Transaction history linked to policies
 - **Week 1 (Day 1):** ✅ Database foundation (COMPLETE)
 - **Week 1 (Day 2-7):** ✅ Authentication APIs + Policy CRUD → (COMPLETE)
 - **Week 2-3:** ✅ Claims workflow + Payments → **Target: 40%**
-- **Week 4:** Analytics dashboards → **Target: 60%**
+- **Week 4:** ✅ Analytics dashboards → **Target: 60%**
 - **Week 5:** Automation + Chatbot → **Target: 80%**
 - **Week 6:** Deployment + Polish → **Target: 100%**
 
@@ -268,7 +268,7 @@ Payments - Transaction history linked to policies
 ## 👨‍💻 Author
 
 **Tsaagane Obakeng Shepherd**
-Final-Year Software Engineering Student | .NET Backend Developer
+Final-Year Software Development Student | .NET Backend Developer
 
 - 📧 Email: obakengtsaagane@gmail.com.com
 - 💼 LinkedIn: [My Profile](https://www.linkedin.com/in/obakeng-tsaagane-307544244/)

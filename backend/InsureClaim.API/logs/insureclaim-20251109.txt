@@ -213,3 +213,77 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13
 2025-11-09 09:12:06.784 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
 2025-11-09 09:12:07.340 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 555.5051ms
 2025-11-09 09:12:42.751 +02:00 [INF] Application is shutting down...
+2025-11-09 20:55:46.640 +02:00 [INF] InsureClaim API started successfully
+2025-11-09 20:55:46.977 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-09 20:55:48.579 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-09 20:55:48.585 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-09 20:55:48.588 +02:00 [INF] Hosting environment: Development
+2025-11-09 20:55:48.599 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-09 20:57:16.716 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - null null
+2025-11-09 20:57:16.991 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-09 20:57:17.000 +02:00 [INF] CORS policy execution successful.
+2025-11-09 20:57:17.011 +02:00 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 23.6507 ms
+2025-11-09 20:57:17.042 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - 204 null null 349.2793ms
+2025-11-09 20:57:17.060 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/login - application/json 56
+2025-11-09 20:57:17.080 +02:00 [INF] CORS policy execution successful.
+2025-11-09 20:57:17.199 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 20:57:17.288 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsureClaim.Application.DTOs.LoginDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 20:57:18.044 +02:00 [INF] Login attempt for email: admin@insureclaim.com
+2025-11-09 20:57:21.852 +02:00 [INF] Executed DbCommand (349ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 20:57:22.468 +02:00 [INF] User logged in successfully: admin@insureclaim.com
+2025-11-09 20:57:22.579 +02:00 [INF] User logged in: admin@insureclaim.com
+2025-11-09 20:57:22.597 +02:00 [INF] Executing OkObjectResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-09 20:57:22.648 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API) in 5348.3293ms
+2025-11-09 20:57:22.656 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 20:57:22.661 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 5580.7907 ms
+2025-11-09 20:57:22.697 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/login - 200 null application/json; charset=utf-8 5636.1141ms
+2025-11-09 21:02:40.358 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/register - null null
+2025-11-09 21:02:40.475 +02:00 [INF] CORS policy execution successful.
+2025-11-09 21:02:40.491 +02:00 [INF] HTTP OPTIONS /api/Auth/register responded 204 in 29.9423 ms
+2025-11-09 21:02:40.508 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/register - 204 null null 165.8377ms
+2025-11-09 21:02:40.524 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/register - application/json 119
+2025-11-09 21:02:40.550 +02:00 [INF] CORS policy execution successful.
+2025-11-09 21:02:40.605 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API)'
+2025-11-09 21:02:40.775 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(InsureClaim.Application.DTOs.RegisterDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 21:02:41.749 +02:00 [INF] Registration attempt for email: test@customer.com
+2025-11-09 21:02:44.628 +02:00 [INF] Executed DbCommand (1,799ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 21:02:46.558 +02:00 [INF] Executed DbCommand (472ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 100), @p2='?' (Size = 100), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 20), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedAt], [Email], [FullName], [IsActive], [PasswordHash], [PhoneNumber], [Role], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-11-09 21:02:46.686 +02:00 [INF] User registered successfully: test@customer.com with Role: "Customer"
+2025-11-09 21:02:46.772 +02:00 [INF] User registered: test@customer.com
+2025-11-09 21:02:46.809 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-09 21:02:47.080 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API) in 6294.5679ms
+2025-11-09 21:02:47.085 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Register (InsureClaim.API)'
+2025-11-09 21:02:47.104 +02:00 [INF] HTTP POST /api/Auth/register responded 201 in 6553.5143 ms
+2025-11-09 21:02:47.113 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/register - 201 null application/json; charset=utf-8 6589.536ms
+2025-11-09 21:04:55.807 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - null null
+2025-11-09 21:04:55.895 +02:00 [INF] CORS policy execution successful.
+2025-11-09 21:04:55.918 +02:00 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 42.2909 ms
+2025-11-09 21:04:55.955 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - 204 null null 157.4943ms
+2025-11-09 21:04:55.966 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/login - application/json 56
+2025-11-09 21:04:55.988 +02:00 [INF] CORS policy execution successful.
+2025-11-09 21:04:56.051 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 21:04:56.076 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsureClaim.Application.DTOs.LoginDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-09 21:04:56.152 +02:00 [INF] Login attempt for email: admin@insureclaim.com
+2025-11-09 21:04:56.746 +02:00 [INF] Executed DbCommand (194ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-09 21:04:56.931 +02:00 [INF] User logged in successfully: admin@insureclaim.com
+2025-11-09 21:04:56.949 +02:00 [INF] User logged in: admin@insureclaim.com
+2025-11-09 21:04:56.959 +02:00 [INF] Executing OkObjectResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-09 21:04:56.974 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API) in 891.6854ms
+2025-11-09 21:04:56.976 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-09 21:04:56.979 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 990.7284 ms
+2025-11-09 21:04:56.986 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/login - 200 null application/json; charset=utf-8 1021.0913ms
+2025-11-09 23:08:09.495 +02:00 [INF] Application is shutting down...

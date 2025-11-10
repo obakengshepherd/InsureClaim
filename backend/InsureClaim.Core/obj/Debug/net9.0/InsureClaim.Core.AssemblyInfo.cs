@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InsureClaim.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32c4d14a222cfdc3b7cba23ee7dfbcc01601dfa9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cb000b9ded83c442b4c0f292cd5e35264fb81fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("InsureClaim.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InsureClaim.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
