@@ -72,7 +72,7 @@ Traditional insurance systems suffer from:
 - [x] Initial tables with relationships
 - [x] User registration & login APIs (Day 2)
 - [x] Policy CRUD endpoints
-- [ ] **NEXT:** React frontend setup
+- [x] React frontend setup
 
 ### 🔜 **Phase 2: Business Operations** (Weeks 2-3)
 
