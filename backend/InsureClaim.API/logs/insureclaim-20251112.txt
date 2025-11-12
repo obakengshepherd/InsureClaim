@@ -3470,3 +3470,861 @@ ORDER BY [c].[SubmittedDate] DESC
 2025-11-12 14:01:18.721 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 174.0089ms
 2025-11-12 14:01:18.727 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 169.1747ms
 2025-11-12 14:02:06.465 +02:00 [INF] Application is shutting down...
+2025-11-12 23:51:28.094 +02:00 [INF] InsureClaim API started successfully
+2025-11-12 23:51:28.227 +02:00 [INF] User profile is available. Using 'C:\Users\obake\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 23:51:28.442 +02:00 [INF] Now listening on: http://localhost:5278
+2025-11-12 23:51:28.445 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 23:51:28.447 +02:00 [INF] Hosting environment: Development
+2025-11-12 23:51:28.449 +02:00 [INF] Content root path: C:\Users\obake\Downloads\InsureClaim\backend\InsureClaim.API
+2025-11-12 23:51:32.689 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/ - null null
+2025-11-12 23:51:32.836 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-11-12 23:51:32.900 +02:00 [INF] HTTP GET / responded 404 in 63.9867 ms
+2025-11-12 23:51:32.943 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/ - 404 0 null 261.2238ms
+2025-11-12 23:51:32.959 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5278/, Response status code: 404
+2025-11-12 23:51:36.525 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/index.html - null null
+2025-11-12 23:51:36.686 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/index.html - 200 null text/html;charset=utf-8 161.4115ms
+2025-11-12 23:51:38.708 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - null null
+2025-11-12 23:51:39.058 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 350.3332ms
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:51:53.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:51:53.526 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.527 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.528 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.531 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.533 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.544 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.553 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 41.9667 ms
+2025-11-12 23:51:53.553 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 42.7227 ms
+2025-11-12 23:51:53.553 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 24.6453 ms
+2025-11-12 23:51:53.553 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 42.9186 ms
+2025-11-12 23:51:53.557 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 23.7801 ms
+2025-11-12 23:51:53.558 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 14.1043 ms
+2025-11-12 23:51:53.563 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 170.9476ms
+2025-11-12 23:51:53.566 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 174.4967ms
+2025-11-12 23:51:53.572 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 180.2667ms
+2025-11-12 23:51:53.576 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 184.5581ms
+2025-11-12 23:51:53.581 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 189.5169ms
+2025-11-12 23:51:53.584 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 191.9905ms
+2025-11-12 23:51:53.591 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:51:53.595 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:51:53.601 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:51:53.635 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.643 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.647 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:53.943 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:51:53.943 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:51:53.943 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:51:54.051 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:51:54.052 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:51:54.052 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:51:57.963 +02:00 [INF] Executed DbCommand (361ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:51:57.963 +02:00 [INF] Executed DbCommand (380ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:51:57.963 +02:00 [INF] Executed DbCommand (374ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:51:58.063 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.165 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:51:58.168 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 4095.2704ms
+2025-11-12 23:51:58.180 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:58.214 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:51:58.246 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:51:58.265 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:51:58.266 +02:00 [INF] HTTP GET /api/Payment responded 200 in 4622.7810 ms
+2025-11-12 23:51:58.275 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.275 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.309 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 4713.3232ms
+2025-11-12 23:51:58.358 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 4299.6312ms
+2025-11-12 23:51:58.395 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:51:58.384 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:51:58.385 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:51:58.383 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 4321.651ms
+2025-11-12 23:51:58.399 +02:00 [INF] HTTP GET /api/Policy responded 200 in 4752.1952 ms
+2025-11-12 23:51:58.434 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:58.446 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:51:58.448 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:51:58.468 +02:00 [INF] HTTP GET /api/Claim responded 200 in 4832.5486 ms
+2025-11-12 23:51:58.459 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:51:58.462 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:51:58.455 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 4854.0918ms
+2025-11-12 23:51:58.491 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 4899.1398ms
+2025-11-12 23:51:58.495 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:51:58.501 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:51:58.680 +02:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:51:58.684 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.692 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 94.696ms
+2025-11-12 23:51:58.696 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:51:58.699 +02:00 [INF] HTTP GET /api/Policy responded 200 in 252.8764 ms
+2025-11-12 23:51:58.717 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 332.1164ms
+2025-11-12 23:51:58.752 +02:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:51:58.754 +02:00 [INF] Executed DbCommand (246ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:51:58.769 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.764 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:51:58.783 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 509.153ms
+2025-11-12 23:51:58.792 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 227.8818ms
+2025-11-12 23:51:58.795 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:51:58.801 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:51:58.808 +02:00 [INF] HTTP GET /api/Payment responded 200 in 628.1452 ms
+2025-11-12 23:51:58.811 +02:00 [INF] HTTP GET /api/Claim responded 200 in 377.1819 ms
+2025-11-12 23:51:58.815 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 649.941ms
+2025-11-12 23:51:58.825 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 440.2643ms
+2025-11-12 23:52:01.731 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:01.731 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:01.741 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:01.747 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:01.749 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 8.3709 ms
+2025-11-12 23:52:01.751 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 3.5096 ms
+2025-11-12 23:52:01.757 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 25.4399ms
+2025-11-12 23:52:01.760 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 28.9888ms
+2025-11-12 23:52:01.770 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:01.795 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:01.799 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:01.801 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:01.907 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:01.917 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:01.928 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 122.2174ms
+2025-11-12 23:52:01.933 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:01.937 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:01.951 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:01.959 +02:00 [INF] HTTP GET /api/Policy responded 200 in 163.2050 ms
+2025-11-12 23:52:01.964 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:01.986 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 215.0957ms
+2025-11-12 23:52:02.001 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:02.040 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:02.067 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:02.099 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 77.6374ms
+2025-11-12 23:52:02.110 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:02.113 +02:00 [INF] HTTP GET /api/Policy responded 200 in 162.4615 ms
+2025-11-12 23:52:02.119 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 186.5458ms
+2025-11-12 23:52:17.199 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - null null
+2025-11-12 23:52:17.236 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:17.248 +02:00 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 12.0370 ms
+2025-11-12 23:52:17.260 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Auth/login - 204 null null 61.7216ms
+2025-11-12 23:52:17.275 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5278/api/Auth/login - application/json 56
+2025-11-12 23:52:17.282 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:17.284 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-12 23:52:17.312 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsureClaim.Application.DTOs.LoginDto) on controller InsureClaim.API.Controllers.AuthController (InsureClaim.API).
+2025-11-12 23:52:17.591 +02:00 [INF] Login attempt for email: admin@insureclaim.com
+2025-11-12 23:52:17.800 +02:00 [INF] Executed DbCommand (117ms) [Parameters=[@__ToLower_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Users] AS [u]
+WHERE LOWER([u].[Email]) = @__ToLower_0
+2025-11-12 23:52:18.242 +02:00 [INF] User logged in successfully: admin@insureclaim.com
+2025-11-12 23:52:18.261 +02:00 [INF] User logged in: admin@insureclaim.com
+2025-11-12 23:52:18.264 +02:00 [INF] Executing OkObjectResult, writing value of type 'InsureClaim.Application.DTOs.AuthResponseDto'.
+2025-11-12 23:52:18.270 +02:00 [INF] Executed action InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API) in 953.4742ms
+2025-11-12 23:52:18.272 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.AuthController.Login (InsureClaim.API)'
+2025-11-12 23:52:18.275 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 992.7005 ms
+2025-11-12 23:52:18.278 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5278/api/Auth/login - 200 null application/json; charset=utf-8 1003.6459ms
+2025-11-12 23:52:18.393 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:18.396 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:18.408 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:18.408 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:18.408 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:18.408 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:18.416 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.424 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.432 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.440 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.447 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.452 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.456 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 40.1219 ms
+2025-11-12 23:52:18.457 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 33.0612 ms
+2025-11-12 23:52:18.460 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 27.8861 ms
+2025-11-12 23:52:18.462 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 21.9190 ms
+2025-11-12 23:52:18.463 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 16.6307 ms
+2025-11-12 23:52:18.465 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 12.8307 ms
+2025-11-12 23:52:18.469 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 75.2756ms
+2025-11-12 23:52:18.474 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 77.7575ms
+2025-11-12 23:52:18.478 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 70.7549ms
+2025-11-12 23:52:18.482 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 73.7575ms
+2025-11-12 23:52:18.489 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 80.845ms
+2025-11-12 23:52:18.493 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 84.4959ms
+2025-11-12 23:52:18.507 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:18.514 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:18.519 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:18.540 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.546 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.551 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.555 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:18.557 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:18.559 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:18.562 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:18.563 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:18.565 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:18.599 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:18.599 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:18.609 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:18.609 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.613 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.616 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.619 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 43.451ms
+2025-11-12 23:52:18.623 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 43.2292ms
+2025-11-12 23:52:18.624 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:18.627 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 57.8852ms
+2025-11-12 23:52:18.627 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:18.629 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:18.630 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:18.633 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:18.642 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.646 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:18.650 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.662 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:18.664 +02:00 [INF] HTTP GET /api/Policy responded 200 in 117.0556 ms
+2025-11-12 23:52:18.665 +02:00 [INF] HTTP GET /api/Claim responded 200 in 114.1955 ms
+2025-11-12 23:52:18.667 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:18.669 +02:00 [INF] HTTP GET /api/Payment responded 200 in 128.3044 ms
+2025-11-12 23:52:18.672 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:18.674 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:18.677 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 162.7348ms
+2025-11-12 23:52:18.680 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 161.1918ms
+2025-11-12 23:52:18.682 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:18.685 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 178.4725ms
+2025-11-12 23:52:18.690 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:18.694 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:18.742 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:18.747 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.751 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:18.752 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 39.4818ms
+2025-11-12 23:52:18.758 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:18.760 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.761 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:18.766 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:18.769 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 47.7037ms
+2025-11-12 23:52:18.773 +02:00 [INF] HTTP GET /api/Policy responded 200 in 130.6223 ms
+2025-11-12 23:52:18.775 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 45.8373ms
+2025-11-12 23:52:18.778 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:18.782 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 158.5419ms
+2025-11-12 23:52:18.787 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:18.789 +02:00 [INF] HTTP GET /api/Claim responded 200 in 139.2731 ms
+2025-11-12 23:52:18.798 +02:00 [INF] HTTP GET /api/Payment responded 200 in 135.9353 ms
+2025-11-12 23:52:18.803 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 176.3752ms
+2025-11-12 23:52:18.808 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 178.7173ms
+2025-11-12 23:52:20.910 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:20.925 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:20.930 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:20.935 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:20.961 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:20.967 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:20.975 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 32.2908ms
+2025-11-12 23:52:20.977 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:20.979 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:20.983 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:20.989 +02:00 [INF] HTTP GET /api/Policy responded 200 in 63.7781 ms
+2025-11-12 23:52:20.992 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:20.996 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 86.1405ms
+2025-11-12 23:52:20.999 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:21.049 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:21.057 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:21.060 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 49.1821ms
+2025-11-12 23:52:21.063 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:21.065 +02:00 [INF] HTTP GET /api/Policy responded 200 in 81.3106 ms
+2025-11-12 23:52:21.069 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 91.6436ms
+2025-11-12 23:52:26.867 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:26.873 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:26.881 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:26.916 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:26.919 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 37.7150 ms
+2025-11-12 23:52:26.927 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 11.2059 ms
+2025-11-12 23:52:26.931 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 64.184ms
+2025-11-12 23:52:26.944 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 71.0558ms
+2025-11-12 23:52:26.949 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:26.962 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:26.963 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:26.965 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:27.057 +02:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:27.069 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:27.079 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 109.6228ms
+2025-11-12 23:52:27.081 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:27.087 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:27.107 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:27.110 +02:00 [INF] HTTP GET /api/Claim responded 200 in 148.6052 ms
+2025-11-12 23:52:27.115 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:27.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 172.2039ms
+2025-11-12 23:52:27.127 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:27.209 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:27.222 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:27.225 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 25.4576ms
+2025-11-12 23:52:27.228 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:27.229 +02:00 [INF] HTTP GET /api/Claim responded 200 in 122.3807 ms
+2025-11-12 23:52:27.234 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 153.0171ms
+2025-11-12 23:52:32.040 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:32.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:32.052 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:32.064 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:32.067 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 15.0322 ms
+2025-11-12 23:52:32.070 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 5.3699 ms
+2025-11-12 23:52:32.077 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 36.758ms
+2025-11-12 23:52:32.082 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 37.881ms
+2025-11-12 23:52:32.094 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:32.106 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:32.108 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:32.109 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:32.148 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:32.158 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:32.166 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 53.6863ms
+2025-11-12 23:52:32.167 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:32.172 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:32.178 +02:00 [INF] HTTP GET /api/Payment responded 200 in 72.1792 ms
+2025-11-12 23:52:32.176 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:32.182 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 87.5976ms
+2025-11-12 23:52:32.183 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:32.195 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:32.226 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:32.231 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:32.234 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 33.1124ms
+2025-11-12 23:52:32.238 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:32.242 +02:00 [INF] HTTP GET /api/Payment responded 200 in 66.3840 ms
+2025-11-12 23:52:32.245 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 78.7181ms
+2025-11-12 23:52:34.282 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:34.282 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:34.293 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:34.306 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:34.311 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 17.3697 ms
+2025-11-12 23:52:34.323 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 17.5568 ms
+2025-11-12 23:52:34.342 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 59.8083ms
+2025-11-12 23:52:34.358 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 75.8844ms
+2025-11-12 23:52:34.378 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:34.397 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:34.398 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:34.400 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:34.413 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:34.424 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:34.428 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 19.7376ms
+2025-11-12 23:52:34.429 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:34.430 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:34.437 +02:00 [INF] HTTP GET /api/Policy responded 200 in 39.9808 ms
+2025-11-12 23:52:34.434 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:34.442 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 63.3835ms
+2025-11-12 23:52:34.444 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:34.457 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:34.478 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:34.483 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:34.490 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 26.4453ms
+2025-11-12 23:52:34.492 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:34.494 +02:00 [INF] HTTP GET /api/Policy responded 200 in 60.1504 ms
+2025-11-12 23:52:34.497 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 68.7051ms
+2025-11-12 23:52:53.989 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:53.992 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:54.010 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.012 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:54.017 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim/statistics - null null
+2025-11-12 23:52:54.023 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:54.027 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment/statistics - null null
+2025-11-12 23:52:54.038 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 28.7346 ms
+2025-11-12 23:52:54.038 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.046 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.056 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.065 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.078 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.086 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 97.4474ms
+2025-11-12 23:52:54.093 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 55.0959 ms
+2025-11-12 23:52:54.098 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 51.5870 ms
+2025-11-12 23:52:54.101 +02:00 [INF] HTTP OPTIONS /api/Claim/statistics responded 204 in 45.0949 ms
+2025-11-12 23:52:54.107 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 42.0590 ms
+2025-11-12 23:52:54.136 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 115.0051ms
+2025-11-12 23:52:54.114 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:54.118 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 126.299ms
+2025-11-12 23:52:54.127 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 114.8614ms
+2025-11-12 23:52:54.130 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim/statistics - 204 null null 113.4092ms
+2025-11-12 23:52:54.109 +02:00 [INF] HTTP OPTIONS /api/Payment/statistics responded 204 in 31.1219 ms
+2025-11-12 23:52:54.144 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:54.147 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.152 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:54.157 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim/statistics - null null
+2025-11-12 23:52:54.161 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment/statistics - null null
+2025-11-12 23:52:54.163 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment/statistics - 204 null null 136.2558ms
+2025-11-12 23:52:54.166 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.168 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 21.4741 ms
+2025-11-12 23:52:54.172 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.176 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.179 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.182 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:54.184 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:54.191 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 76.4847ms
+2025-11-12 23:52:54.194 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 21.6819 ms
+2025-11-12 23:52:54.197 +02:00 [INF] HTTP OPTIONS /api/Claim/statistics responded 204 in 21.2831 ms
+2025-11-12 23:52:54.200 +02:00 [INF] HTTP OPTIONS /api/Payment/statistics responded 204 in 20.9096 ms
+2025-11-12 23:52:54.207 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.208 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:54.212 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:54.214 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 61.4734ms
+2025-11-12 23:52:54.216 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim/statistics - 204 null null 59.381ms
+2025-11-12 23:52:54.226 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment/statistics - 204 null null 65.3355ms
+2025-11-12 23:52:54.230 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:54.246 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.248 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:54.251 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim/statistics - null null
+2025-11-12 23:52:54.260 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment/statistics - null null
+2025-11-12 23:52:54.276 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:54.278 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:54.285 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.298 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.315 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.330 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:54.333 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 94.9382ms
+2025-11-12 23:52:54.341 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:52:54.344 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.345 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.358 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:54.359 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:54.365 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.375 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:54.378 +02:00 [INF] Route matched with {action = "GetClaimsStatistics", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetClaimsStatistics() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:54.378 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.379 +02:00 [INF] HTTP GET /api/Policy responded 200 in 213.1850 ms
+2025-11-12 23:52:54.380 +02:00 [INF] Route matched with {action = "GetPaymentStatistics", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentStatistics() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:54.381 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:54.387 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.392 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 65.4246ms
+2025-11-12 23:52:54.395 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 250.9267ms
+2025-11-12 23:52:54.399 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:52:54.408 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 58.6936ms
+2025-11-12 23:52:54.410 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:54.416 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:52:54.424 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:52:54.425 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:54.426 +02:00 [INF] HTTP GET /api/Claim responded 200 in 219.1489 ms
+2025-11-12 23:52:54.430 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.438 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.438 +02:00 [INF] HTTP GET /api/Payment responded 200 in 192.1941 ms
+2025-11-12 23:52:54.442 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 260.0767ms
+2025-11-12 23:52:54.444 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:54.445 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 22.72ms
+2025-11-12 23:52:54.449 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 237.0722ms
+2025-11-12 23:52:54.457 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:52:54.458 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:54.461 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:52:54.467 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+2025-11-12 23:52:54.469 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+2025-11-12 23:52:54.472 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.476 +02:00 [INF] HTTP GET /api/Policy responded 200 in 110.3176 ms
+2025-11-12 23:52:54.476 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:52:54.484 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:54.490 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 149.1929ms
+2025-11-12 23:52:54.495 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.497 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:54.510 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 36.1913ms
+2025-11-12 23:52:54.511 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 2
+2025-11-12 23:52:54.511 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 1
+2025-11-12 23:52:54.515 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:52:54.515 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:52:54.525 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 1
+2025-11-12 23:52:54.526 +02:00 [INF] HTTP GET /api/Claim responded 200 in 96.5195 ms
+2025-11-12 23:52:54.529 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 2
+2025-11-12 23:52:54.530 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.541 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 125.498ms
+2025-11-12 23:52:54.543 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 3
+2025-11-12 23:52:54.548 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 34.9401ms
+2025-11-12 23:52:54.555 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 3
+2025-11-12 23:52:54.564 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:52:54.566 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 4
+2025-11-12 23:52:54.572 +02:00 [INF] HTTP GET /api/Payment responded 200 in 100.6583 ms
+2025-11-12 23:52:54.576 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 4
+2025-11-12 23:52:54.579 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 122.4602ms
+2025-11-12 23:52:54.591 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 5
+2025-11-12 23:52:54.606 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([c].[ClaimAmount]), 0.0)
+FROM [Claims] AS [c]
+2025-11-12 23:52:54.606 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 2
+2025-11-12 23:52:54.624 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 4
+2025-11-12 23:52:54.646 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([c].[ApprovedAmount]), 0.0)
+FROM [Claims] AS [c]
+WHERE [c].[ApprovedAmount] IS NOT NULL
+2025-11-12 23:52:54.646 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 1 AND [p].[Status] = 2
+2025-11-12 23:52:54.660 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`3[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.674 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 2 AND [p].[Status] = 2
+2025-11-12 23:52:54.684 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 3 AND [p].[Status] = 2
+2025-11-12 23:52:54.693 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API) in 303.4422ms
+2025-11-12 23:52:54.696 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim/statistics - null null
+2025-11-12 23:52:54.697 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.700 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 5 AND [p].[Status] = 2
+2025-11-12 23:52:54.705 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.710 +02:00 [INF] HTTP GET /api/Claim/statistics responded 200 in 412.3093 ms
+2025-11-12 23:52:54.715 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.716 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`4[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`4[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`4[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.726 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim/statistics - 200 null application/json; charset=utf-8 475.6668ms
+2025-11-12 23:52:54.732 +02:00 [INF] Route matched with {action = "GetClaimsStatistics", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetClaimsStatistics() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:52:54.766 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+2025-11-12 23:52:54.766 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API) in 368.4844ms
+2025-11-12 23:52:54.771 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment/statistics - null null
+2025-11-12 23:52:54.778 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 1
+2025-11-12 23:52:54.779 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.784 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:52:54.794 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 2
+2025-11-12 23:52:54.795 +02:00 [INF] HTTP GET /api/Payment/statistics responded 200 in 479.5791 ms
+2025-11-12 23:52:54.798 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.810 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 3
+2025-11-12 23:52:54.811 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment/statistics - 200 null application/json; charset=utf-8 551.0914ms
+2025-11-12 23:52:54.814 +02:00 [INF] Route matched with {action = "GetPaymentStatistics", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaymentStatistics() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:52:54.834 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 4
+2025-11-12 23:52:54.856 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+2025-11-12 23:52:54.861 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Claims] AS [c]
+WHERE [c].[Status] = 5
+2025-11-12 23:52:54.867 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 2
+2025-11-12 23:52:54.877 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([c].[ClaimAmount]), 0.0)
+FROM [Claims] AS [c]
+2025-11-12 23:52:54.881 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 1
+2025-11-12 23:52:54.888 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([c].[ApprovedAmount]), 0.0)
+FROM [Claims] AS [c]
+WHERE [c].[ApprovedAmount] IS NOT NULL
+2025-11-12 23:52:54.892 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 3
+2025-11-12 23:52:54.897 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`3[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.910 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 4
+2025-11-12 23:52:54.914 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API) in 149.5976ms
+2025-11-12 23:52:54.923 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 2
+2025-11-12 23:52:54.925 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetClaimsStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.929 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Status] = 4
+2025-11-12 23:52:54.929 +02:00 [INF] HTTP GET /api/Claim/statistics responded 200 in 224.5903 ms
+2025-11-12 23:52:54.936 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 1 AND [p].[Status] = 2
+2025-11-12 23:52:54.939 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim/statistics - 200 null application/json; charset=utf-8 243.5852ms
+2025-11-12 23:52:54.944 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 2 AND [p].[Status] = 2
+2025-11-12 23:52:54.957 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 3 AND [p].[Status] = 2
+2025-11-12 23:52:54.962 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0)
+FROM [Payments] AS [p]
+WHERE [p].[Method] = 5 AND [p].[Status] = 2
+2025-11-12 23:52:54.969 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType4`4[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType5`4[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`4[[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:52:54.975 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API) in 124.3367ms
+2025-11-12 23:52:54.977 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetPaymentStatistics (InsureClaim.API)'
+2025-11-12 23:52:54.979 +02:00 [INF] HTTP GET /api/Payment/statistics responded 200 in 195.4798 ms
+2025-11-12 23:52:54.983 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment/statistics - 200 null application/json; charset=utf-8 211.9373ms
+2025-11-12 23:53:01.525 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:53:01.537 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:53:01.547 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - null null
+2025-11-12 23:53:01.554 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - null null
+2025-11-12 23:53:01.554 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:53:01.556 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.558 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - null null
+2025-11-12 23:53:01.573 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.577 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.580 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.587 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.589 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 32.9826 ms
+2025-11-12 23:53:01.593 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.594 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 21.2002 ms
+2025-11-12 23:53:01.596 +02:00 [INF] HTTP OPTIONS /api/Policy responded 204 in 18.6229 ms
+2025-11-12 23:53:01.598 +02:00 [INF] HTTP OPTIONS /api/Claim responded 204 in 17.8068 ms
+2025-11-12 23:53:01.600 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 12.2913 ms
+2025-11-12 23:53:01.606 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 81.4552ms
+2025-11-12 23:53:01.608 +02:00 [INF] HTTP OPTIONS /api/Payment responded 204 in 14.5742 ms
+2025-11-12 23:53:01.611 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 73.8894ms
+2025-11-12 23:53:01.615 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Policy - 204 null null 67.8274ms
+2025-11-12 23:53:01.622 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Claim - 204 null null 67.8711ms
+2025-11-12 23:53:01.625 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 70.4265ms
+2025-11-12 23:53:01.630 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:53:01.633 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5278/api/Payment - 204 null null 75.5739ms
+2025-11-12 23:53:01.642 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:53:01.667 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:53:01.674 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.681 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.687 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.693 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:53:01.695 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:53:01.696 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:53:01.698 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:53:01.699 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:53:01.707 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:53:01.716 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:53:01.723 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:53:01.727 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:53:01.730 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.740 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.743 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.746 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 35.5245ms
+2025-11-12 23:53:01.747 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Policy - null null
+2025-11-12 23:53:01.747 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 32.5948ms
+2025-11-12 23:53:01.753 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Claim - null null
+2025-11-12 23:53:01.757 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 31.3345ms
+2025-11-12 23:53:01.759 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5278/api/Payment - null null
+2025-11-12 23:53:01.762 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:53:01.767 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.774 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:53:01.777 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.779 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:53:01.788 +02:00 [INF] CORS policy execution successful.
+2025-11-12 23:53:01.792 +02:00 [INF] HTTP GET /api/Policy responded 200 in 118.1540 ms
+2025-11-12 23:53:01.793 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:53:01.795 +02:00 [INF] HTTP GET /api/Claim responded 200 in 114.2967 ms
+2025-11-12 23:53:01.797 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:53:01.797 +02:00 [INF] HTTP GET /api/Payment responded 200 in 110.4374 ms
+2025-11-12 23:53:01.799 +02:00 [INF] Executing endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:53:01.806 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 175.1233ms
+2025-11-12 23:53:01.808 +02:00 [INF] Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPolicies() on controller InsureClaim.API.Controllers.PolicyController (InsureClaim.API).
+2025-11-12 23:53:01.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 168.5575ms
+2025-11-12 23:53:01.812 +02:00 [INF] Route matched with {action = "GetAllClaims", controller = "Claim"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllClaims() on controller InsureClaim.API.Controllers.ClaimController (InsureClaim.API).
+2025-11-12 23:53:01.814 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 147.6242ms
+2025-11-12 23:53:01.816 +02:00 [INF] Route matched with {action = "GetAllPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPayments() on controller InsureClaim.API.Controllers.PaymentController (InsureClaim.API).
+2025-11-12 23:53:01.836 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Policies] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+ORDER BY [p].[CreatedAt] DESC
+2025-11-12 23:53:01.847 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ApprovedAmount], [c].[ClaimAmount], [c].[ClaimNumber], [c].[CreatedAt], [c].[Description], [c].[DocumentPath], [c].[IncidentDate], [c].[PolicyId], [c].[ReviewNotes], [c].[ReviewedDate], [c].[Status], [c].[SubmittedDate], [c].[UpdatedAt], [c].[UserId], [p].[Id], [p].[CoverageAmount], [p].[CreatedAt], [p].[EndDate], [p].[PolicyNumber], [p].[PremiumAmount], [p].[StartDate], [p].[Status], [p].[Type], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+ORDER BY [c].[SubmittedDate] DESC
+2025-11-12 23:53:01.863 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[Method], [p].[PaymentDate], [p].[PolicyId], [p].[ProcessedDate], [p].[Reference], [p].[Status], [p].[TransactionId], [p0].[Id], [p0].[CoverageAmount], [p0].[CreatedAt], [p0].[EndDate], [p0].[PolicyNumber], [p0].[PremiumAmount], [p0].[StartDate], [p0].[Status], [p0].[Type], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt]
+FROM [Payments] AS [p]
+INNER JOIN [Policies] AS [p0] ON [p].[PolicyId] = [p0].[Id]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+ORDER BY [p].[PaymentDate] DESC
+2025-11-12 23:53:01.867 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PolicyDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.875 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.ClaimDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.878 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InsureClaim.Application.DTOs.PaymentDto, InsureClaim.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 23:53:01.881 +02:00 [INF] Executed action InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API) in 49.9072ms
+2025-11-12 23:53:01.888 +02:00 [INF] Executed action InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API) in 42.6517ms
+2025-11-12 23:53:01.892 +02:00 [INF] Executed action InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API) in 31.2953ms
+2025-11-12 23:53:01.897 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PolicyController.GetAllPolicies (InsureClaim.API)'
+2025-11-12 23:53:01.902 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.ClaimController.GetAllClaims (InsureClaim.API)'
+2025-11-12 23:53:01.907 +02:00 [INF] Executed endpoint 'InsureClaim.API.Controllers.PaymentController.GetAllPayments (InsureClaim.API)'
+2025-11-12 23:53:01.909 +02:00 [INF] HTTP GET /api/Policy responded 200 in 141.9336 ms
+2025-11-12 23:53:01.910 +02:00 [INF] HTTP GET /api/Claim responded 200 in 132.8345 ms
+2025-11-12 23:53:01.912 +02:00 [INF] HTTP GET /api/Payment responded 200 in 123.8282 ms
+2025-11-12 23:53:01.916 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Policy - 200 null application/json; charset=utf-8 169.5882ms
+2025-11-12 23:53:01.924 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Claim - 200 null application/json; charset=utf-8 170.1577ms
+2025-11-12 23:53:01.931 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5278/api/Payment - 200 null application/json; charset=utf-8 172.4617ms
+2025-11-12 23:53:16.732 +02:00 [INF] Application is shutting down...
