@@ -130,6 +130,13 @@ app.UseHttpsRedirection();
 app.UseCors("AllowReactApp");
 
 app.UseAuthentication();
+
+app.UseCors(policy =>
+    policy.WithOrigins("https://insureclaim.netlify.app")
+          .AllowAnyHeader()
+          .AllowAnyMethod());
+
+
 app.UseAuthorization();
 
 app.MapControllers();

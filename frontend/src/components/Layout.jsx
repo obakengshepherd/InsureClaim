@@ -11,7 +11,7 @@ import {
 } from "react-icons/fi";
 
 const Layout = ({ children }) => {
-  const { user, logout } = useAuth();
+  const { user, logout, isAdmin } = useAuth();
   const location = useLocation();
 
   const navigation = [
@@ -19,6 +19,8 @@ const Layout = ({ children }) => {
     { name: "Policies", href: "/policies", icon: FiFileText },
     { name: "Claims", href: "/claims", icon: FiAlertCircle },
     { name: "Payments", href: "/payments", icon: FiCreditCard },
+    // Add admin link conditionally
+    ...(isAdmin ? [{ name: "Admin", href: "/admin", icon: FiShield }] : []),
   ];
 
   const isActive = (href) => location.pathname === href;
@@ -65,12 +67,15 @@ const Layout = ({ children }) => {
 
             {/* User Menu */}
             <div className="flex items-center gap-4">
-              <div className="hidden sm:block text-right">
+              <Link
+                to="/profile"
+                className="hidden sm:block text-right hover:opacity-80 transition"
+              >
                 <p className="text-sm font-medium text-gray-900">
                   {user?.fullName}
                 </p>
                 <p className="text-xs text-gray-500">{user?.role}</p>
-              </div>
+              </Link>
               <button
                 onClick={logout}
                 className="flex items-center gap-2 btn btn-secondary text-sm"

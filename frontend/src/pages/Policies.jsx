@@ -10,7 +10,9 @@ import {
   FiCalendar,
   FiDollarSign,
   FiEye,
+  FiSearch,
 } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const Policies = () => {
   const { user: _user } = useAuth();
@@ -18,6 +20,7 @@ const Policies = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); // ✅ Added search state
 
   useEffect(() => {
     fetchPolicies();
@@ -28,12 +31,24 @@ const Policies = () => {
       setLoading(true);
       const response = await policyAPI.getAll();
       setPolicies(response.data);
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to load policies");
+    } catch (error) {
+      const message =
+        error.response?.data?.message || "Failed to load policies";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
   };
+
+  // ✅ Filter logic for search bar
+  const filteredPolicies = policies.filter((policy) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      policy.policyNumber.toLowerCase().includes(query) ||
+      policy.type.toLowerCase().includes(query)
+    );
+  });
 
   const getPolicyTypeColor = (type) => {
     const colors = {
@@ -81,17 +96,40 @@ const Policies = () => {
           </button>
         </div>
 
+        {/* Error message */}
         <ErrorAlert message={error} onClose={() => setError("")} />
 
-        {/* Policies Grid */}
-        {policies.length === 0 ? (
+        {/* ✅ Search Bar */}
+        {policies.length > 0 && (
+          <div className="mb-6">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <FiSearch className="text-gray-400" />
+              </div>
+              <input
+                type="text"
+                placeholder="Search policies by policy number or type..."
+                className="input pl-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* ✅ Policies Grid */}
+        {filteredPolicies.length === 0 ? (
           <div className="card text-center py-12">
             <FiFileText className="text-6xl text-gray-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              No policies yet
+              {policies.length === 0
+                ? "No policies yet"
+                : "No policies match your search"}
             </h3>
             <p className="text-gray-600 mb-6">
-              Get started by creating your first insurance policy
+              {policies.length === 0
+                ? "Get started by creating your first insurance policy"
+                : "Try adjusting your search terms"}
             </p>
             <button
               onClick={() => setShowCreateModal(true)}
@@ -103,7 +141,7 @@ const Policies = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {policies.map((policy) => (
+            {filteredPolicies.map((policy) => (
               <div
                 key={policy.id}
                 className="card hover:shadow-lg transition-shadow cursor-pointer"
@@ -183,12 +221,12 @@ const Policies = () => {
   );
 };
 
-// Create Policy Modal Component
+// ✅ Create Policy Modal (unchanged)
 const CreatePolicyModal = ({ onClose, onSuccess }) => {
   const { user } = useAuth();
   const [formData, setFormData] = useState({
     userId: user?.userId || 0,
-    type: 2, // Default to Auto
+    type: 2,
     coverageAmount: "",
     startDate: new Date().toISOString().split("T")[0],
     durationMonths: 12,
@@ -221,9 +259,13 @@ const CreatePolicyModal = ({ onClose, onSuccess }) => {
         ...formData,
         coverageAmount: parseFloat(formData.coverageAmount),
       });
+      toast.success("Policy created successfully!");
       onSuccess();
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to create policy");
+    } catch (error) {
+      const message =
+        error.response?.data?.message || "Failed to create policy";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }

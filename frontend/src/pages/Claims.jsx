@@ -11,7 +11,9 @@ import {
   FiDollarSign,
   FiFileText,
   FiClock,
+  FiSearch,
 } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const Claims = () => {
   const { user: _user } = useAuth();
@@ -19,6 +21,7 @@ const Claims = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [showSubmitModal, setShowSubmitModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetchClaims();
@@ -29,8 +32,10 @@ const Claims = () => {
       setLoading(true);
       const response = await claimAPI.getAll();
       setClaims(response.data);
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to load claims");
+    } catch (error) {
+      const message = error.response?.data?.message || "Failed to load claims";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -64,6 +69,15 @@ const Claims = () => {
     }
   };
 
+  const filteredClaims = claims.filter((claim) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      claim.claimNumber.toLowerCase().includes(query) ||
+      claim.policyNumber.toLowerCase().includes(query) ||
+      claim.description.toLowerCase().includes(query)
+    );
+  });
+
   if (loading) {
     return (
       <Layout>
@@ -92,6 +106,24 @@ const Claims = () => {
 
         <ErrorAlert message={error} onClose={() => setError("")} />
 
+        {/* Search Bar */}
+        {claims.length > 0 && (
+          <div className="mb-6">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <FiSearch className="text-gray-400" />
+              </div>
+              <input
+                type="text"
+                placeholder="Search claims by claim number, policy, or description..."
+                className="input pl-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+        )}
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="card">
@@ -119,14 +151,14 @@ const Claims = () => {
         </div>
 
         {/* Claims List */}
-        {claims.length === 0 ? (
+        {filteredClaims.length === 0 ? (
           <div className="card text-center py-12">
             <FiAlertCircle className="text-6xl text-gray-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              No claims yet
+              No claims found
             </h3>
             <p className="text-gray-600 mb-6">
-              Submit a claim when you need to use your insurance
+              Try adjusting your search or submit a new claim.
             </p>
             <button
               onClick={() => setShowSubmitModal(true)}
@@ -138,7 +170,7 @@ const Claims = () => {
           </div>
         ) : (
           <div className="space-y-4">
-            {claims.map((claim) => (
+            {filteredClaims.map((claim) => (
               <div
                 key={claim.id}
                 className="card hover:shadow-lg transition-shadow"
@@ -270,9 +302,12 @@ const SubmitClaimModal = ({ onClose, onSuccess }) => {
         claimAmount: parseFloat(formData.claimAmount),
         documentPath: null,
       });
+      toast.success("Claim submitted successfully!");
       onSuccess();
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to submit claim");
+    } catch (error) {
+      const message = error.response?.data?.message || "Failed to submit claim";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }

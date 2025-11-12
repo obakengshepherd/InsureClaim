@@ -12,6 +12,7 @@ import {
   FiCheckCircle,
   FiXCircle,
 } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const Payments = () => {
   const { user: _user } = useAuth();
@@ -29,8 +30,11 @@ const Payments = () => {
       setLoading(true);
       const response = await paymentAPI.getAll();
       setPayments(response.data);
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to load payments");
+    } catch (error) {
+      const message =
+        error.response?.data?.message || "Failed to load payments";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -276,9 +280,13 @@ const RecordPaymentModal = ({ onClose, onSuccess }) => {
         method: parseInt(formData.method),
         reference: formData.reference || null,
       });
+      toast.success("Payment recorded successfully!");
       onSuccess();
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to record payment");
+    } catch (error) {
+      const message =
+        error.response?.data?.message || "Failed to record payment";
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }

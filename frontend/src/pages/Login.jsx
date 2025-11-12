@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FiMail, FiLock, FiAlertCircle } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,9 +30,11 @@ const Login = () => {
     const result = await login(formData.email, formData.password);
 
     if (result.success) {
+      toast.success("Login successful!");
       navigate("/dashboard");
     } else {
       setError(result.message);
+      toast.error(result.message);
     }
 
     setLoading(false);

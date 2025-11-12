@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FiUser, FiMail, FiLock, FiPhone, FiAlertCircle } from "react-icons/fi";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,9 +33,11 @@ const Register = () => {
     const result = await register(formData);
 
     if (result.success) {
+      toast.success("Account created successfully!");
       navigate("/dashboard");
     } else {
       setError(result.message);
+      toast.error(result.message);
     }
 
     setLoading(false);
